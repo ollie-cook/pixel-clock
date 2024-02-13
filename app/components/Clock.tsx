@@ -46,19 +46,19 @@ export default function Clock() {
   }, []);
 
   return (
-    <div className="flex gap-6">
+    <div className="flex gap-2 sm:gap-6">
         {
           hour?.map((character, index) => {
             const Number = numbers[character];
             const guid = crypto.randomUUID();
             return (
-              <div className="w-64" key={guid}>
+              <div className="w-8 sm:w-12 lg:w-20 xl:w-32" key={guid}>
                 <Number colour="#f59e0b" />
               </div>
             )
           })
         }
-        <div className="w-48">
+        <div className="w-6 sm:w-9 lg:w-[3.75rem] xl:w-24">
           <Colon colour="#f59e0b"/>
         </div>
         {
@@ -66,13 +66,13 @@ export default function Clock() {
             const Number = numbers[character];
             const guid = crypto.randomUUID();
             return (
-              <div className="w-64" key={guid}>
+              <div className="w-8 sm:w-12 lg:w-20 xl:w-32" key={guid}>
                 <Number colour="#f59e0b" />
               </div>
             )
           })
         }
-        <div className="w-48">
+        <div className="w-6 sm:w-9 lg:w-[3.75rem] xl:w-24">
           <Colon colour="#f59e0b"/>
         </div>
         {
@@ -80,7 +80,7 @@ export default function Clock() {
             const Number = numbers[character];
             const guid = crypto.randomUUID();
             return (
-              <div className="w-64" key={guid}>
+              <div className="w-8 sm:w-12 lg:w-20 xl:w-32" key={guid}>
                 <Number colour="#f59e0b" />
               </div>
             )
